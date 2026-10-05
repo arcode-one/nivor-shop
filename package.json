@@ -1,0 +1,30 @@
+{
+  "name": "nivor-headphones-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/prepare-images.mjs && vue-tsc --noEmit && vite build && vite build --ssr src/entry-server.ts --outDir work/ssr && node scripts/prepare-pages.mjs",
+    "preview": "vite preview",
+    "test:seo": "node scripts/check-seo.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "5.3.0",
+    "@fontsource-variable/geist-mono": "5.3.0",
+    "@lucide/vue": "1.38.0",
+    "vue": "3.5.42",
+    "vue-router": "4.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "@vitejs/plugin-vue": "6.0.8",
+    "sharp": "0.35.4",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "vue-tsc": "3.3.11"
+  }
+}
